@@ -37,4 +37,7 @@ The Dataset has been collected by using Chrome Extension "Download All Images". 
 
 # Screen Shots:
 
-![image](https://user-images.githubusercontent.com/104086680/232634351-577e6444-b615-4d3e-9abb-c66375cc5490.png)
+
+![image](https://user-images.githubusercontent.com/104086680/232634486-ff0c5208-4577-4fd5-88f2-0d16147bfe20.png)
+
+
