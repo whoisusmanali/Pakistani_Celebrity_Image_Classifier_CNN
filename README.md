@@ -40,4 +40,7 @@ The Dataset has been collected by using Chrome Extension "Download All Images". 
 
 ![image](https://user-images.githubusercontent.com/104086680/232634486-ff0c5208-4577-4fd5-88f2-0d16147bfe20.png)
 
+### Model:
+
+![image](https://user-images.githubusercontent.com/104086680/232634611-4b5eb858-6627-4cdc-a5d8-49f455c912fd.png)
 
