@@ -23,3 +23,12 @@ The Dataset has been collected by using Chrome Extension "Download All Images". 
   Pipeline is made by using tensorflow.keras.utils and store all the into batches for further model building<br>
 ### 5. Scaling:<br>
   After making batches of the data then scale these images so each image has proper same size because model only can take the same size image not different.<br>
+### 6. Split the Data:<br>
+  Data spliting is done by dividing the whole data into 3 parts train,test and validation data. The train has 70%, test has 20% and validation has 10% of the total data.<br>
+### 7. Model Building:<br>
+  Model is build in Deep Neural Network in which there are 9 different layers first 6 are Cov2d and MaxPool which have different units and same filters and activation.
+  The 7 layer is flatten layer to flat the data into 1d. The last two layers are Dense layers. In output layer the activation function is "Softmax" because having 10 different classes.
+  Then compile the data with loss= sparse_categorical_features and optimizer is "adam".
+### 8. Performance check:
+  The performace of this model is really accurate with 98.44% accuracy and with minimum loss(0.06).
+
