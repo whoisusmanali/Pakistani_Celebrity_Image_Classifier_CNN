@@ -32,7 +32,7 @@ The Dataset has been collected by using Chrome Extension "Download All Images". 
 ### 8. Performance check:
   The performace of this model is really accurate with 98.44% accuracy and with minimum loss(0.06).
 
-
+ 
 
 # Screen Shots:
 
