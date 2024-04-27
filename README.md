@@ -1,51 +1,75 @@
-# Pakistani_Celebrity_Image_Classifier_CNN
-The Dataset has been collected by using Chrome Extension "Download All Images". After doing some data preprocessing apply CNN model.
+# Pakistani Celebrity Image Classifier CNN
 
-## Libraries/Dependencies:<br>
-1. cv2 <br>
-2. numpy<br>
-3. matplotlib<br>
-4. os<br>
-5. shuttle<br>
-6. Tensorflow<br>
-7. Keras<br>
-8. imghdr<br>
+This project involves building a Convolutional Neural Network (CNN) to classify images of Pakistani celebrities. The dataset was collected using the Chrome Extension "Download All Images" and underwent several preprocessing steps before model training.
 
+## Libraries/Dependencies:
+1. OpenCV (`cv2`)
+2. NumPy
+3. Matplotlib
+4. os
+5. shutil
+6. TensorFlow
+7. Keras
+8. imghdr
 
+# Project Workflow:
 
-# Steps Involved:<br>
-### 1. Importing the above mentioned libraries<br>
-### 2. Data Cleaning<br>
-  In this step I clean data by using HardCodeCase .xml files in which detect eyes and face of the actors and implements the changes. Furthermore, I make a new cropped image folder in which save all the cropped images.<br>
-  Secondly, delete the images that was got cropped but the faces was not of the same person so delete those files.<br>
-  Lastly, delete those images those were blur or not was looking good to model.<br>
-### 3. Preprocessing the images:<br>
-  Preprocessing is crucial so model can perform best so I make a function in which if images have any wrong format image then delete this image.<br>
-### 4. Make a pipeline:<br>
-  Pipeline is made by using tensorflow.keras.utils and store all the into batches for further model building<br>
-### 5. Scaling:<br>
-  After making batches of the data then scale these images so each image has proper same size because model only can take the same size image not different.<br>
-### 6. Split the Data:<br>
-  Data spliting is done by dividing the whole data into 3 parts train,test and validation data. The train has 70%, test has 20% and validation has 10% of the total data.<br>
-### 7. Model Building:<br>
-  Model is build in Deep Neural Network in which there are 9 different layers first 6 are Cov2d and MaxPool which have different units and same filters and activation.
-  The 7 layer is flatten layer to flat the data into 1d. The last two layers are Dense layers. In output layer the activation function is "Softmax" because having 10 different classes.
-  Then compile the data with loss= sparse_categorical_features and optimizer is "adam".
-### 8. Performance check:
-  The performace of this model is really accurate with 98.44% accuracy and with minimum loss(0.06).
+## 1. Importing Libraries:
+All necessary libraries are imported at the beginning of the script for clarity and reproducibility.
 
- 
+## 2. Data Cleaning:
+Data cleaning is essential for preparing the dataset for training. This step involves:
+- Utilizing pre-trained Haar Cascade XML files to detect and crop faces in images.
+- Deleting images where the cropped face does not belong to the intended celebrity.
+- Removing blurry or low-quality images that may hinder model performance.
 
-# Screen Shots:
+## 3. Image Preprocessing:
+A preprocessing function is applied to handle images with incorrect formats and ensure uniformity in the dataset.
 
+## 4. Data Pipeline:
+The dataset is processed into batches using TensorFlow's Keras utilities to streamline model training.
 
-![image](https://user-images.githubusercontent.com/104086680/232634486-ff0c5208-4577-4fd5-88f2-0d16147bfe20.png)
+## 5. Image Scaling:
+Images are scaled to a consistent size to facilitate model training, as CNNs typically require inputs of uniform dimensions.
 
-### Model:
+## 6. Data Splitting:
+The dataset is divided into training, testing, and validation sets with proportions of 70%, 20%, and 10%, respectively.
 
-![image](https://user-images.githubusercontent.com/104086680/232634611-4b5eb858-6627-4cdc-a5d8-49f455c912fd.png)
+## 7. Model Building:
+The CNN architecture consists of:
+- Six convolutional (`Conv2D`) layers followed by max-pooling layers for feature extraction.
+- A flattening layer to transform the data into a 1D array.
+- Two dense (`Dense`) layers for classification, with the output layer using the softmax activation function for multi-class classification.
+The model is compiled with sparse categorical cross-entropy loss and the Adam optimizer.
 
-### Performance: 
+## 8. Performance Evaluation:
+The model demonstrates high accuracy, achieving 98.44% accuracy with minimal loss (0.06).
 
-![image](https://user-images.githubusercontent.com/104086680/232634861-90ba921c-286c-4845-bad2-532719c7f9dc.png)
+# Screenshots:
 
+![Screenshot of Data Cleaning](https://user-images.githubusercontent.com/104086680/232634486-ff0c5208-4577-4fd5-88f2-0d16147bfe20.png)
+
+### Model Architecture:
+
+![Screenshot of Model Architecture](https://user-images.githubusercontent.com/104086680/232634611-4b5eb858-6627-4cdc-a5d8-49f455c912fd.png)
+
+---
+
+## Importing the Repository to Local Environment and Usage:
+
+### 1. Clone the Repository:
+```bash
+git clone https://github.com/your-username/your-repository.git
+```
+
+### 2. Navigate to the Repository:
+```bash
+cd your-repository
+```
+### 3. Install Dependencies:
+```bash
+pip install -r requirements.txt
+```
+## 4. Run the Script:
+```bash
+python main.py
